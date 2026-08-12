@@ -11,9 +11,12 @@ import Privacy from './pages/Privacy';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import NotFound from './pages/NotFound';
-
+import { ThemeProvider } from './context/ThemeContext';
+import { WalletProvider } from './context/WalletContext';
 function App() {
   return (
+       <ThemeProvider>
+        <WalletProvider>
     <Router>
       <div className="min-h-screen flex flex-col">
         <Navbar />
@@ -34,6 +37,8 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </WalletProvider>
+    </ThemeProvider>
   );
 }
 

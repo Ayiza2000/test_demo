@@ -15,7 +15,7 @@ function Home() {
       title: 'Luxury Downtown Apartment',
       price: {
         usd: 850000,
-        eth: 425, // Example ETH value
+        eth: 425,
       },
       location: 'Miami, FL',
       image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
@@ -191,7 +191,7 @@ function Home() {
         },
         {
           question: "What is the marketplace, or secondary market?",
-          answer: "The RentVerse Marketplace is our platform that allows RentVerse community members to buy and sell NFTs among themselves.  It is the equivalent of a secondary market where investors can buy and sell NFTs among themselves. We may also cooperate with other marketplaces to allow anyone to choose their preferred marketplace."
+          answer: "The RentVerse Marketplace is our platform that allows RentVerse community members to buy and sell NFTs among themselves. It is the equivalent of a secondary market where investors can buy and sell NFTs among themselves. We may also cooperate with other marketplaces to allow anyone to choose their preferred marketplace."
         },
         {
           question: "I sell or buy NFTs during the month. Who receives the rental income for the current month?",
@@ -199,7 +199,7 @@ function Home() {
         },
         {
           question: "Are transactions on the platform secure?",
-          answer: "RentVerse uses the most advanced technical means to ensure the confidentiality and security of transactions on the platform. "
+          answer: "RentVerse uses the most advanced technical means to ensure the confidentiality and security of transactions on the platform."
         }
       ]
     }
@@ -213,7 +213,7 @@ function Home() {
   };
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
@@ -244,11 +244,12 @@ function Home() {
           </motion.p>
         </div>
       </section>
+
       {/* Investment Steps */}
       <section className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Start Investing in Minutes</h2>
-          <p className="text-secondary-600">Your journey to crypto-powered real estate investment</p>
+          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Start Investing in Minutes</h2>
+          <p className="text-secondary-600 dark:text-gray-400">Your journey to crypto-powered real estate investment</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -261,13 +262,13 @@ function Home() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
             >
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-primary-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="text-2xl text-primary-600" />
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md dark:shadow-gray-800 text-center transition-colors duration-300">
+                <div className="bg-primary-50 dark:bg-primary-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="text-2xl text-primary-600 dark:text-primary-400" />
                 </div>
-                <div className="text-primary-600 text-2xl font-bold mb-4">Step {index + 1}</div>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-secondary-600">{step.description}</p>
+                <div className="text-primary-600 dark:text-primary-400 text-2xl font-bold mb-4">Step {index + 1}</div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{step.title}</h3>
+                <p className="text-secondary-600 dark:text-gray-400">{step.description}</p>
               </div>
             </motion.div>
           ))}
@@ -275,28 +276,28 @@ function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-secondary-900 text-white py-16">
+      <section className="bg-secondary-900 dark:bg-gray-800 text-white py-16 transition-colors duration-300">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How RentVerse Works</h2>
-            <p className="text-secondary-300">Understanding our tokenized real estate platform</p>
+            <h2 className="text-3xl font-bold mb-4 text-white">How RentVerse Works</h2>
+            <p className="text-secondary-300 dark:text-gray-400">Understanding our tokenized real estate platform</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {howItWorks.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-secondary-800 p-6 rounded-lg"
+                className="bg-secondary-800 dark:bg-gray-700 p-6 rounded-lg transition-colors duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
               >
-                <div className="bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-primary-600 dark:bg-primary-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <item.icon className="text-2xl text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-center">{item.title}</h3>
-                <p className="text-secondary-300 text-center">{item.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-center text-white">{item.title}</h3>
+                <p className="text-secondary-300 dark:text-gray-400 text-center">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -306,15 +307,15 @@ function Home() {
       {/* Featured Properties */}
       <section className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Featured Investment Opportunities</h2>
-          <p className="text-secondary-600">Curated properties with verified returns and immediate tokenization</p>
+          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Featured Investment Opportunities</h2>
+          <p className="text-secondary-600 dark:text-gray-400">Curated properties with verified returns and immediate tokenization</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProperties.map((property, index) => (
             <motion.div
               key={property.id}
-              className="card group"
+              className="card group bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-gray-800 overflow-hidden transition-colors duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -326,44 +327,44 @@ function Home() {
                   alt={property.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-primary-600 font-semibold">
+                <div className="absolute top-4 right-4 bg-white dark:bg-gray-700 px-3 py-1 rounded-full text-primary-600 dark:text-primary-400 font-semibold text-sm">
                   {property.status}
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{property.title}</h3>
-                <p className="text-secondary-600 mb-4">{property.location}</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{property.title}</h3>
+                <p className="text-secondary-600 dark:text-gray-400 mb-4">{property.location}</p>
                 
                 <div className="flex justify-between items-center mb-4">
                   <div>
-                    <p className="text-sm text-secondary-500">Price</p>
-                    <p className="font-semibold">${property.price.usd.toLocaleString()}</p>
-                    <p className="text-sm text-primary-600">{property.price.eth} ETH</p>
+                    <p className="text-sm text-secondary-500 dark:text-gray-500">Price</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">${property.price.usd.toLocaleString()}</p>
+                    <p className="text-sm text-primary-600 dark:text-primary-400">{property.price.eth} ETH</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-secondary-500">ROI</p>
-                    <p className="font-semibold text-green-600">{property.roi}</p>
+                    <p className="text-sm text-secondary-500 dark:text-gray-500">ROI</p>
+                    <p className="font-semibold text-green-600 dark:text-green-400">{property.roi}</p>
                   </div>
                 </div>
 
                 <div className="space-y-2 mb-4">
                   <div className="flex justify-between text-sm">
-                    <span className="text-secondary-600">Total Investors</span>
-                    <span className="font-medium">{property.metrics.totalInvestors}</span>
+                    <span className="text-secondary-600 dark:text-gray-400">Total Investors</span>
+                    <span className="font-medium text-gray-900 dark:text-white">{property.metrics.totalInvestors}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-secondary-600">Funded</span>
-                    <span className="font-medium">{property.metrics.funded}</span>
+                    <span className="text-secondary-600 dark:text-gray-400">Funded</span>
+                    <span className="font-medium text-gray-900 dark:text-white">{property.metrics.funded}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-secondary-600">Min Investment</span>
-                    <span className="font-medium">{property.metrics.minInvestment}</span>
+                    <span className="text-secondary-600 dark:text-gray-400">Min Investment</span>
+                    <span className="font-medium text-gray-900 dark:text-white">{property.metrics.minInvestment}</span>
                   </div>
                 </div>
 
                 <Link
                   to={`/properties/${property.id}`}
-                  className="btn w-full flex items-center justify-center"
+                  className="btn w-full flex items-center justify-center bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                 >
                   Invest Now
                   <FiArrowRight className="ml-2" />
@@ -375,26 +376,26 @@ function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-secondary-50 pt-16">
+      <section className="bg-secondary-50 dark:bg-gray-800 pt-16 transition-colors duration-300">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Why Choose RentVerse</h2>
-            <p className="text-secondary-600">Experience the future of real estate investment</p>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Why Choose RentVerse</h2>
+            <p className="text-secondary-600 dark:text-gray-400">Experience the future of real estate investment</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {advantages.map((advantage, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md text-center"
+                className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md dark:shadow-gray-800 text-center transition-colors duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
               >
-                <advantage.icon className="text-4xl text-primary-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{advantage.title}</h3>
-                <p className="text-secondary-600">{advantage.description}</p>
+                <advantage.icon className="text-4xl text-primary-600 dark:text-primary-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{advantage.title}</h3>
+                <p className="text-secondary-600 dark:text-gray-400">{advantage.description}</p>
               </motion.div>
             ))}
           </div>
@@ -403,20 +404,20 @@ function Home() {
       
       {/* CTA Section */}
       <section className="container">
-        <div className="bg-primary-600 rounded-2xl p-8 md:p-12 text-white text-center">
+        <div className="bg-primary-600 dark:bg-primary-700 rounded-2xl p-8 md:p-12 text-white text-center transition-colors duration-300">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Investing?</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-100">
             Join thousands of investors already earning passive income through tokenized real estate.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/properties"
-              className="btn bg-white text-primary-600 hover:bg-primary-50"
+              className="btn bg-white text-primary-600 hover:bg-primary-50 dark:bg-gray-100 dark:text-primary-600 dark:hover:bg-gray-200 px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
             >
               Browse Properties
             </Link>
             <button
-              className="btn bg-primary-700 hover:bg-primary-800"
+              className="btn bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
               <FaWallet className="mr-2" />
               Connect Wallet
@@ -426,14 +427,14 @@ function Home() {
       </section>
       
       {/* Blog */}
-      <div className="container bg-white py-24">
+      <div className="container bg-white dark:bg-gray-900 py-24 transition-colors duration-300">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <h1 className="text-3xl font-bold mb-4">Latest Insights</h1>
-          <p className="text-secondary-600">
+          <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Latest Insights</h1>
+          <p className="text-secondary-600 dark:text-gray-400">
             Stay informed with our latest articles and market analysis
           </p>
         </motion.div>
@@ -447,7 +448,7 @@ function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-gray-800 overflow-hidden transition-colors duration-300"
             >
               <Link to={`/blog/${post.slug}`}>
                 <div className="relative h-48">
@@ -456,18 +457,18 @@ function Home() {
                     alt={post.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-primary-600">
+                  <div className="absolute top-4 right-4 bg-white dark:bg-gray-700 px-3 py-1 rounded-full text-sm font-medium text-primary-600 dark:text-primary-400">
                     {categories.find(c => c.id === post.category)?.name}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h2 className="text-xl font-semibold mb-3 hover:text-primary-600 transition-colors">
+                  <h2 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-secondary-600 mb-4">
+                  <p className="text-secondary-600 dark:text-gray-400 mb-4">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center text-sm text-secondary-500">
+                  <div className="flex items-center text-sm text-secondary-500 dark:text-gray-500">
                     <FiUser className="mr-2" />
                     <span className="mr-4">{post.author}</span>
                     <FiClock className="mr-2" />
@@ -488,24 +489,24 @@ function Home() {
           className="max-w-3xl mx-auto"
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-secondary-600">Find answers to common questions about our platform, cryptocurrency payments, and real estate investment.</p>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+            <p className="text-secondary-600 dark:text-gray-400">Find answers to common questions about our platform, cryptocurrency payments, and real estate investment.</p>
           </div>
           <div className="space-y-8">
             {faqSections.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="divide-y divide-secondary-100">
+              <div key={sectionIndex} className="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-gray-800 overflow-hidden transition-colors duration-300">
+                <div className="divide-y divide-secondary-100 dark:divide-gray-700">
                   {section.questions.map((item, questionIndex) => (
                     <div key={questionIndex} className="p-6">
                       <button
                         className="w-full flex justify-between items-center text-left"
                         onClick={() => toggleSection(section.title, questionIndex)}
                       >
-                        <span className="font-medium">{item.question}</span>
+                        <span className="font-medium text-gray-900 dark:text-white">{item.question}</span>
                         {openSections[`${section.title}-${questionIndex}`] ? (
-                          <FiChevronUp className="flex-shrink-0 ml-4" />
+                          <FiChevronUp className="flex-shrink-0 ml-4 text-gray-900 dark:text-white" />
                         ) : (
-                          <FiChevronDown className="flex-shrink-0 ml-4" />
+                          <FiChevronDown className="flex-shrink-0 ml-4 text-gray-900 dark:text-white" />
                         )}
                       </button>
                       <AnimatePresence>
@@ -517,7 +518,7 @@ function Home() {
                             transition={{ duration: 0.3 }}
                             className="overflow-hidden"
                           >
-                            <p className="mt-4 text-secondary-600">
+                            <p className="mt-4 text-secondary-600 dark:text-gray-400">
                               {item.answer}
                             </p>
                           </motion.div>
@@ -533,20 +534,20 @@ function Home() {
       </section>
       
       {/* Discord CTA */}
-      <section className="py-12 bg-primary-900">
+      <section className="py-12 bg-primary-900 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
             <div>
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
                 Join Our Community
               </h2>
-              <p className="mt-4 text-lg text-primary-100">
+              <p className="mt-4 text-lg text-primary-100 dark:text-gray-300">
                 Connect with other crypto real estate investors, share insights, and get early access to new properties.
               </p>
               <dl className="mt-8 space-y-6">
                 <div className="flex">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-700 text-white">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-700 dark:bg-primary-600 text-white">
                       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
@@ -556,7 +557,7 @@ function Home() {
                     <dt className="text-lg leading-6 font-medium text-white">
                       10,000+ Members
                     </dt>
-                    <dd className="mt-2 text-base text-primary-100">
+                    <dd className="mt-2 text-base text-primary-100 dark:text-gray-300">
                       Join a growing community of crypto-savvy real estate investors
                     </dd>
                   </div>
@@ -564,7 +565,7 @@ function Home() {
 
                 <div className="flex">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-700 text-white">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-700 dark:bg-primary-600 text-white">
                       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
@@ -574,7 +575,7 @@ function Home() {
                     <dt className="text-lg leading-6 font-medium text-white">
                       Weekly Events
                     </dt>
-                    <dd className="mt-2 text-base text-primary-100">
+                    <dd className="mt-2 text-base text-primary-100 dark:text-gray-300">
                       Educational webinars, market updates, and networking sessions
                     </dd>
                   </div>
@@ -583,24 +584,24 @@ function Home() {
             </div>
 
             <div className="mt-12 lg:mt-0 flex justify-center">
-              <div className="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full">
-                <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-sm w-full transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-6">
                   Join Discord
                 </h3>
-                <p className="text-gray-500 text-center mb-8">
+                <p className="text-gray-500 dark:text-gray-400 text-center mb-8">
                   Get instant access to our community and start connecting with other investors
                 </p>
                 <a
                   href="https://discord.gg/RentVerse"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 md:py-4 md:text-lg md:px-10 transition-colors duration-200"
                 >
                   Join Now
                 </a>
-                <p className="mt-4 text-sm text-gray-500 text-center">
+                <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 text-center">
                   Already a member?{' '}
-                  <a href="https://discord.gg/RentVerse" className="text-indigo-600 hover:text-indigo-500">
+                  <a href="https://discord.gg/RentVerse" className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300">
                     Sign in
                   </a>
                 </p>
